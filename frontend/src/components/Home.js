@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import parse from 'html-react-parser';
 
 import * as API from '../api';
 
@@ -17,11 +18,7 @@ class Home extends Component {
   }
 
   render() {
-    return (
-      <div>
-        <h1>{this.state.html}</h1>
-      </div>
-    );
+    return <div>{parse(this.state.html)}</div>;
   }
 }
 
