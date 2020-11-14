@@ -10,10 +10,17 @@ class Home extends Component {
 
   componentDidMount() {
     API.getHelp().then((info) => {
-      console.log(info);
       this.setState(() => ({
         html: info,
       }));
+    });
+
+    API.getCategories().then((categories) => {
+      console.log(categories);
+    });
+
+    API.getPosts().then((posts) => {
+      console.log(posts);
     });
   }
 
