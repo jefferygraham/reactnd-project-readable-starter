@@ -18,7 +18,27 @@ export const getCategories = () =>
     .then((res) => res.json())
     .then((data) => data);
 
+export const getCategoryPosts = () =>
+  fetch(`${api}/react/posts`, { headers })
+    .then((res) => res.json())
+    .then((data) => data);
+
 export const getPosts = () =>
   fetch(`${api}/posts`, { headers })
+    .then((res) => res.json())
+    .then((data) => data);
+
+export const getPost = () =>
+  fetch(`${api}/posts/8xf0y6ziyjabvozdd253nd`, { headers })
+    .then((res) => res.json())
+    .then((data) => data);
+
+export const getPostComments = () =>
+  fetch(`${api}/posts/8xf0y6ziyjabvozdd253nd/comments`, { headers })
+    .then((res) => res.json())
+    .then((data) => data);
+
+export const getComment = () =>
+  fetch(`${api}/comments/894tuq4ut84ut8v4t8wun89g`, { headers })
     .then((res) => res.json())
     .then((data) => data);

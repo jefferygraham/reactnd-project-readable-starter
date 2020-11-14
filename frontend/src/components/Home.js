@@ -19,8 +19,24 @@ class Home extends Component {
       console.log(categories);
     });
 
+    API.getCategoryPosts().then((posts) => {
+      console.log(posts);
+    });
+
     API.getPosts().then((posts) => {
       console.log(posts);
+    });
+
+    API.getPost().then((post) => {
+      console.log(post);
+    });
+
+    API.getPostComments().then((comments) => {
+      console.log(comments);
+    });
+
+    API.getComment().then((comment) => {
+      console.log(comment);
     });
   }
 
